@@ -1,0 +1,24 @@
+@import "_nullstyle";
+@import "_sing-up";
+
+
+
+
+// Work Sans
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+// font-family: 'Work Sans', sans-serif;
+
+// PT Sans
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+// font-family: 'PT Sans', sans-serif;
+
+
+
+
+body {
+	font-family: 'Work Sans', sans-serif;
+	background: rgb(170, 170, 170);
+}
+label {
+	display: block;
+}

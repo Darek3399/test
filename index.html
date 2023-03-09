@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Vtop3</title>
+	<link rel="stylesheet" href="./css/style.css" />
+	<meta http-equiv="Content-type" content="charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<div class="sing-up__cntr">
+			<h1 class="sing-up__title">Sing up</h1>
+		</div>
+		<main class="register-form">
+			<h2 class="register-form__title">New user?</h2>
+			<h3 class="register-form__subtitle">Use the form below to create your account.</h3>
+
+			<!-- register form -->
+			<form id="registration" class="register-form__form">
+
+				<!-- first name -->
+				<div class="register-form__first-name_cntr">
+					<label for="first name">First name</label>
+					<input type="text" id="first name" class="register-form__input_first-name"></input>
+				</div>
+
+				<!-- last name -->
+				<div class="register-form__last-name_cntr">
+					<label for="last name">Last name</label>
+					<input type="text" id="last name" class="register-form__input_last-name"></input>
+				</div>
+
+				<!-- nationality -->
+				<div class="register-form__nationality_cntr">
+					<label for="nationality">Nationality</label>
+					<select id="nationality" name="nationality">
+						<option>American</option>
+					</select>
+				</div>
+
+				<!-- email -->
+				<div class="register-form__last-name_cntr">
+					<label for="email">E-mail</label>
+					<input type="email" id="email" class="register-form__input_email"></input>
+				</div>
+
+				<!-- date of birth -->
+				<div class="register-form__birth_cntr">
+					<label for="birth">Date of Birth</label>
+
+						<select id="birth"></select>
+
+						<select id="birth">
+							<option>January</option>
+							<option>February</option>
+							<option>March</option>
+							<option>April</option>
+							<option>May</option>
+							<option>June</option>
+							<option>July</option>
+							<option>August</option>
+							<option>September</option>
+							<option>October</option>
+							<option>November</option>
+							<option>December</option>
+						</select>
+
+						<select id="birth"></select>
+				</div>
+
+				<!-- gender -->
+				<div class="register-form__gender_cntr">
+					<label for="gender">Gender</label>
+					<div class="register-form__gender_checkboxes">
+						<div class="register-form__gender_checkbox-cntr">
+							<input type="checkbox" class="register-form__genser_checkbox"></input>
+							<span class="register-form__genser_checkbox-name">Male</span>
+						</div>
+						<div class="register-form__gender_checkbox-cntr">
+							<input type="checkbox" class="register-form__genser_checkbox"></input>
+							<span class="register-form__genser_checkbox-name">Female</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- pass -->
+				<div class="register-form__pass_cntr">
+					<label for="pass">Password</label>
+					<input type="password" class="register-form__input_pass"></input>
+				</div>
+
+
+				<!-- confirm pass -->
+				<div class="register-form__confirm-pass_cntr">
+					<label for="pass">Confirm password</label>
+					<input type="password" class="register-form__input_confirm-pass"></input>
+				</div>
+			</form>
+
+
+
+
+			<div class="link-and-button">
+				<span class="link-and-button__link">Have an account? <a href="#login">Login</a></span>
+				<button type="button" class="link-and-button__submit-button">Complete Signup</button>
+			</div>
+		</main>
+
+
+	</div>
+
+
+
+	<script src="./js/country_selection.js" type="module"></script>
+	<!-- <script src="./js/country_selection.js"></script> -->
+</body>
+
+</html>

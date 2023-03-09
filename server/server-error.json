@@ -1,0 +1,6 @@
+{
+	"response": {
+		"status": "error",
+		"statusText": "this email is already in use"
+	}
+}
