@@ -1,5 +1,7 @@
 @import "_nullstyle";
 @import "_sing-up";
+@import "_form";
+@import "_adaptive";
 
 
 
@@ -17,8 +19,18 @@
 
 body {
 	font-family: 'Work Sans', sans-serif;
-	background: rgb(170, 170, 170);
+	background: #F2F2F2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 400px;
 }
-label {
-	display: block;
+.wrapper {
+	width: 100%;
+	max-width: 665px;
+	min-width: 400px;
+	height: 100%;
+	max-height: 480px;
+	display: flex;
+	color: #7C7C7C;
 }

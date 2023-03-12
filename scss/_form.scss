@@ -1,0 +1,231 @@
+.register-form {
+	display: flex;
+	flex-direction: column;
+	padding-top: 5.8%;
+	padding-left: 3.2%;
+	width: 100%;
+	background: #ffffff;
+	position: relative;
+	min-height: 400px;
+
+	// bg svg
+	&__bg {
+		position: absolute;
+		height: fit-content;
+		right: 0;
+		bottom: 0;
+		z-index: 0;
+		& path {
+			stroke-width: 5;
+			stroke: #ac000015;
+			stroke-dasharray: 2500;
+			stroke-dashoffset: 0;
+			animation: bg_animate 3s linear;
+		}
+	}
+
+	&__title {
+		font-size: 22px;
+		line-height: 26px;
+		letter-spacing: -0.3px;
+		font-weight: 600;
+		color: #111111;
+		margin-bottom: 1px;
+	}
+	&__subtitle {
+		display: block;
+		font-size: 14px;
+		letter-spacing: -0.33px;
+		margin-bottom: 20px;
+		color: #111111;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+	}
+
+	// form
+	&__form {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 16px;
+	}
+
+	// inputs cntrs
+	&__item {
+		display: flex;
+		flex-direction: column;
+		max-width: 234.5px;
+		font-size: 14px;
+		line-height: 16px;
+		letter-spacing: -0.3px;
+		border-bottom: solid 0.7px #f2f2f2;
+		position: relative;
+		z-index: 1;
+		& label {
+			font-size: 12px;
+		}
+		& input {
+			padding-left: 2px;
+			padding-bottom: 6.1px;
+			height: 20px;
+			margin-left: -1.5px;
+			margin-right: -3px;
+			background: transparent;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			&::placeholder {
+				color: #111111;
+				font-size: 14px;
+			}
+			&:focus::placeholder {
+				color: transparent;
+			}
+		}
+		& select {
+			appearance: none;
+			cursor: pointer;
+			margin-top: -5.4px;
+			padding: 0;
+			height: 26px;
+			width: 100%;
+			font: inherit;
+			letter-spacing: 0.1px;
+			position: relative;
+			background-color: transparent;
+			background: url(../img/Shape.svg) no-repeat right;
+			background-position-y: calc(100% - 10px);
+			border-bottom: solid 0.7px #f2f2f2;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			& option {
+				text-indent: 5px;
+				white-space: pre-wrap;
+				// background-color: #f2f2f2;
+			}
+		}
+	}
+
+	
+	&__first-name {
+		gap: 4.9px;
+	}
+	&__last-name {
+		gap: 4.6px;
+		margin-left: -5.2px;
+		& input {
+			margin-left: 0px;
+		}
+	}
+	&__nationality {
+		gap: 4.6px;
+	}
+	&__email {
+		gap: 4.9px;
+		margin-left: -5px;
+		& input {
+			margin-left: -0.5px;
+		}
+	}
+	&__birth {
+		margin-top: 0.5px;
+		gap: 5.3px;
+		border: none;
+		&_selects {
+			width: 100%;
+			display: grid;
+			grid-template-columns: 24% 39% 28.4%;
+			grid-template-rows: 1fr;
+			gap: 10px;
+		}
+	}
+	&__gender {
+		gap: 2.5px;
+		margin-left: -6px;
+		margin-top: 0.5px;
+		border: none;
+		&_checkboxes {
+			width: 100%;
+			display: flex;
+			gap: 19px;
+			align-items: center;
+		}
+		&_checkbox-cntr {
+			color: #111111;
+			display: flex;
+			gap: 13px;
+			letter-spacing: -0.1px;
+			align-items: center;
+			& :first-child {
+				margin-left: 1px;
+			}
+			& :nth-child(2) {
+				letter-spacing: 0.1px;
+				margin-left: -5px;
+			}
+		}
+	}
+	&__confirm-pass {
+		margin-left: -5px;
+	}
+
+	// input validate
+	&__error {
+		border-bottom: solid 2px #ff2828;
+		& input {
+			color: #ff2828;
+		}
+	}
+}
+
+
+.pass {
+	margin-top: 1px;
+	& input {
+		height: 25.5px;
+	}
+}
+
+// login link and submit button
+.link-and-button {
+	padding-bottom: 8.7%;
+	margin-right: 4.2%;
+	flex: 1 0 auto;
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	&__link {
+		font-size: 13px;
+		letter-spacing: -0.3px;
+		color: #111111;
+		display: flex;
+		gap: 4px;
+		& a {
+			text-decoration: underline;
+			font-size: 13.5px;
+			font-weight: 600;
+		}
+	}
+	&__submit-button {
+		font-family: "PT Sans", sans-serif;
+		padding: 6px 27px 8px 25px;
+		font-size: 14px;
+		margin-bottom: -11.5px;
+		background: #5a61ed;
+		color: #ffffff;
+	}
+}
+
+// animation for bg svg
+@keyframes bg_animate {
+	0% {
+		stroke-dashoffset: 2500;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
