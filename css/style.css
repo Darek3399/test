@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
   stroke-dashoffset: 0;
   -webkit-animation: bg_animate 4s linear;
           animation: bg_animate 4s linear;
+  transform-origin: center;
 }
 .register-form__title {
   font-size: 22px;
