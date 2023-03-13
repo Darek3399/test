@@ -34,14 +34,14 @@
                                                                                                      <!-- inputs -->
 				<!-- first name -->
 				<div class="register-form__first-name register-form__item">
-					<label for="first name">First Name</label>
-					<input placeholder="Alice" type="text" id="first name" class="register-form__input_first-name"></input>
+					<label for="firstName">First Name</label>
+					<input placeholder="Alice" type="text" id="firstName" class="register-form__input_first-name"></input>
 				</div>
 
 				<!-- last name -->
 				<div class="register-form__last-name register-form__item">
-					<label for="last name">Last Name</label>
-					<input placeholder="Miller" type="text" id="last name" class="register-form__input_last-name"></input>
+					<label for="lastName">Last Name</label>
+					<input placeholder="Miller" type="text" id="lastName" class="register-form__input_last-name"></input>
 				</div>
 
 				<!-- nationality -->
@@ -63,7 +63,7 @@
 					<label for="birth">Date of Birth</label>
 
 					<div class="register-form__birth_selects">
-						<select id="birth">
+						<select id="birth" class="birth-days">
 							<option>1</option>
 							<option>2</option>
 							<option>3</option>
@@ -94,22 +94,22 @@
 							<option>28</option>
 							<option>29</option>
 							<option>30</option>
-							<option>31</option>
+							<option selected>31</option>
 						</select>
 
-						<select id="birth">
-							<option>January</option>
-							<option>February</option>
-							<option>March</option>
-							<option>April</option>
-							<option>May</option>
-							<option>June</option>
-							<option>July</option>
-							<option>August</option>
-							<option>September</option>
-							<option>October</option>
-							<option>November</option>
-							<option>December</option>
+						<select id="birth" class="birth-months">
+							<option value="1">January</option>
+							<option selected value="2">February</option>
+							<option value="3">March</option>
+							<option value="4">April</option>
+							<option value="5">May</option>
+							<option value="6">June</option>
+							<option value="7">July</option>
+							<option value="8">August</option>
+							<option value="9">September</option>
+							<option value="10">October</option>
+							<option value="11">November</option>
+							<option value="12">December</option>
 						</select>
 
 						<select id="birth" class="birth-years">
@@ -135,14 +135,14 @@
 				<!-- pass -->
 				<div class="register-form__pass register-form__item pass">
 					<label for="pass">Password</label>
-					<input type="password" class="register-form__input_pass"></input>
+					<input id="pass" type="password" class="register-form__input_pass"></input>
 				</div>
 
 
 				<!-- confirm pass -->
 				<div class="register-form__confirm-pass register-form__item pass">
-					<label for="pass">Confirm Password</label>
-					<input type="password" class="register-form__input_confirm-pass"></input>
+					<label for="confPass">Confirm Password</label>
+					<input id="confPass" type="password" class="register-form__input_confirm-pass"></input>
 				</div>
 			</form>
 
@@ -161,8 +161,9 @@
 
 
 
-	<script src="./js/country_selection.js" type="module"></script>
+	<script src="./js/countryYears_selection.js" type="module"></script>
 	<script src="./js/inputs_animation.js" type="module"></script>
+	<script src="./js/submit.js" type="module"></script>
 </body>
 
 </html>

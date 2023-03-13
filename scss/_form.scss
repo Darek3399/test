@@ -195,9 +195,11 @@
 
 	// input validate
 	&__error {
-		border-bottom: solid 2px #ff2828;
-		& input {
+		transition-delay: 0s !important;
+		transition: 0s;
+		& input, select {
 			color: #ff2828;
+			border-bottom: solid 2px #ff2828;
 		}
 	}
 }

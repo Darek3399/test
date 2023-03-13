@@ -1,4 +1,3 @@
-const requests = [new URL('../server/server-ok.json', import.meta.url), new URL('../server/server-error.json', import.meta.url)]
 const countries = new URL('../server/countries_dates.json', import.meta.url)
 
 // get and set in html countries and years
@@ -33,13 +32,3 @@ fetch(countries, {
 		yearsSelect.appendChild(newItem)
 	}
 })
-
-
-
-// const dateCheck = (day, month, year) => {
-// 	const date = new Date(year, --month, day)
-// 	console.log(date)
-// 	return day === date.getDate() && month === date.getMonth() && year === date.getFullYear()
-// }
-
-// console.log(dateCheck(9, 3, 2023))
