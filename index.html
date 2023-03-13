@@ -2,10 +2,10 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+<link>
 	<title>Vtop3</title>
-	<link rel="stylesheet" href="./css/style.css" />
-	<meta http-equiv="Content-type" content="charset=UTF-8" />
+	<link rel="stylesheet" href="./css/style.css">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
@@ -35,13 +35,13 @@
 				<!-- first name -->
 				<div class="register-form__first-name register-form__item">
 					<label for="firstName">First Name</label>
-					<input placeholder="Alice" type="text" id="firstName" class="register-form__input_first-name"></input>
+					<input placeholder="Alice" type="text" id="firstName" class="register-form__input_first-name"/>
 				</div>
 
 				<!-- last name -->
 				<div class="register-form__last-name register-form__item">
 					<label for="lastName">Last Name</label>
-					<input placeholder="Miller" type="text" id="lastName" class="register-form__input_last-name"></input>
+					<input placeholder="Miller" type="text" id="lastName" class="register-form__input_last-name"/>
 				</div>
 
 				<!-- nationality -->
@@ -55,7 +55,7 @@
 				<div class="register-form__email register-form__item">
 					<label for="email">E-mail</label>
 					<input placeholder="alice.miller@yahoo.com" type="email" id="email"
-						class="register-form__input_email"></input>
+						class="register-form__input_email"/>
 				</div>
 
 				<!-- date of birth -->
@@ -97,7 +97,7 @@
 							<option selected>31</option>
 						</select>
 
-						<select id="birth" class="birth-months">
+						<select class="birth-months">
 							<option value="1">January</option>
 							<option selected value="2">February</option>
 							<option value="3">March</option>
@@ -112,7 +112,7 @@
 							<option value="12">December</option>
 						</select>
 
-						<select id="birth" class="birth-years">
+						<select class="birth-years">
 						</select>
 					</div>
 				</div>
@@ -122,11 +122,11 @@
 					<label for="gender">Gender</label>
 					<div class="register-form__gender_checkboxes">
 						<div class="register-form__gender_checkbox-cntr">
-							<input name="gender" type="radio"></input>
+							<input id="gender" name="gender" type="radio"/>
 							<span>Male</span>
 						</div>
 						<div class="register-form__gender_checkbox-cntr">
-							<input name="gender" type="radio" checked></input>
+							<input name="gender" type="radio" checked/>
 							<span>Female</span>
 						</div>
 					</div>
@@ -135,14 +135,14 @@
 				<!-- pass -->
 				<div class="register-form__pass register-form__item pass">
 					<label for="pass">Password</label>
-					<input id="pass" type="password" class="register-form__input_pass"></input>
+					<input id="pass" type="password" class="register-form__input_pass"/>
 				</div>
 
 
 				<!-- confirm pass -->
 				<div class="register-form__confirm-pass register-form__item pass">
 					<label for="confPass">Confirm Password</label>
-					<input id="confPass" type="password" class="register-form__input_confirm-pass"></input>
+					<input id="confPass" type="password" class="register-form__input_confirm-pass"/>
 				</div>
 			</form>
 
