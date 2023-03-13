@@ -1,5 +1,3 @@
-
-
 const requests = [new URL('../server/server-ok.json', import.meta.url), new URL('../server/server-error.json', import.meta.url)]
 
 
@@ -15,7 +13,7 @@ http.open("GET", requests[1])
 http.send()
 
 const func = (data) => {
-	console.log(JSON.parse(data).response.statusText)
+	// console.log(JSON.parse(data).response.statusText)
 }
 
 

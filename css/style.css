@@ -163,6 +163,8 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: solid 0.7px #f2f2f2;
   position: relative;
   z-index: 1;
+  opacity: 0;
+  transition: 1s linear;
 }
 .register-form__item label {
   font-size: 12px;
@@ -222,6 +224,27 @@ h1, h2, h3, h4, h5, h6 {
 .register-form__item select option {
   text-indent: 5px;
   white-space: pre-wrap;
+}
+.register-form__item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+.register-form__item:nth-child(4) {
+  transition-delay: 1s;
+}
+.register-form__item:nth-child(5) {
+  transition-delay: 1.5s;
+}
+.register-form__item:nth-child(6) {
+  transition-delay: 2s;
+}
+.register-form__item:nth-child(7) {
+  transition-delay: 2.5s;
+}
+.register-form__item:nth-child(8) {
+  transition-delay: 3s;
+}
+.register-form__item:nth-child(9) {
+  transition-delay: 3.5s;
 }
 .register-form__first-name {
   gap: 4.9px;
