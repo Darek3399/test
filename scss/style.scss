@@ -15,6 +15,10 @@
 // font-family: 'PT Sans', sans-serif;
 
 
+html {
+	min-width: 400px;
+	min-height: 700px;
+}
 
 
 body {
@@ -23,14 +27,13 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	min-width: 400px;
 }
 .wrapper {
 	width: 100%;
 	max-width: 665px;
-	min-width: 400px;
-	height: 100%;
 	max-height: 480px;
+	height: 100%;
 	display: flex;
+	align-items: center;
 	color: #7C7C7C;
 }

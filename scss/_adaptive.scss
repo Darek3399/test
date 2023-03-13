@@ -2,7 +2,7 @@
 	.wrapper {
 		max-height: fit-content !important;
 		align-items: center;
-		padding: 0 15px;
+		padding: 0 5px;
 	}
 	.sing-up {
 		height: 85%;
@@ -36,7 +36,7 @@
 
 @media (max-height: 755px) and (max-width: 680px) {
 	.wrapper {
-		min-height: 755px;
+		min-height: 700px;
 	}
 	.sing-up {
 		&__title {
