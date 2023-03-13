@@ -21,6 +21,8 @@ const firstNameValidate = () => {
 	const firstName = document.querySelector(`#firstName`).value
 	if(firstName.length < 2) {
 		document.querySelector(`.register-form__first-name`).classList.add(`register-form__error`)
+	}else {
+		document.querySelector(`.register-form__first-name`).classList.remove(`register-form__error`)
 	}
 }
 
@@ -29,6 +31,8 @@ const lastNameValidate = () => {
 	const lastName = document.querySelector(`#lastName`).value
 	if(lastName.length < 2) {
 		document.querySelector(`.register-form__last-name`).classList.add(`register-form__error`)
+	}else {
+		document.querySelector(`.register-form__last-name`).classList.remove(`register-form__error`)
 	}
 }
 
@@ -43,6 +47,8 @@ const dateValidate = () => {
 
 	if(!checkDate) {
 		document.querySelector(`.register-form__birth`).classList.add(`register-form__error`)
+	}else {
+		document.querySelector(`.register-form__birth`).classList.remove(`register-form__error`)
 	}
 }
 
@@ -55,6 +61,8 @@ const emailValidate = () => {
 	)
 	if(!emailValidateResult) {
 		document.querySelector(`.register-form__email`).classList.add(`register-form__error`)
+	}else {
+		document.querySelector(`.register-form__email`).classList.remove(`register-form__error`)
 	}
  }
 
@@ -70,6 +78,9 @@ const passValidate = () => {
 		if(!passValidateResult) {
 			document.querySelector(`.register-form__pass`).classList.add(`register-form__error`)
 			document.querySelector(`.register-form__confirm-pass`).classList.add(`register-form__error`)
+		}else {
+			document.querySelector(`.register-form__pass`).classList.remove(`register-form__error`)
+			document.querySelector(`.register-form__confirm-pass`).classList.remove(`register-form__error`)
 		}
 	}else {
 		document.querySelector(`.register-form__confirm-pass`).classList.add(`register-form__error`)
