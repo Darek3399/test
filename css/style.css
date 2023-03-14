@@ -123,13 +123,14 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 0;
 }
 .register-form__bg path {
-  stroke-width: 5;
+  stroke-width: 2;
   stroke: rgba(172, 0, 0, 0.0823529412);
   stroke-dasharray: 2500;
   stroke-dashoffset: 0;
   -webkit-animation: bg_animate 4s linear;
           animation: bg_animate 4s linear;
   transform-origin: center;
+  transform: scale(0.98);
 }
 .register-form__title {
   font-size: 22px;
@@ -138,6 +139,9 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: #111111;
   margin-bottom: 1px;
+  position: relative;
+  z-index: 1;
+  transition: 1s linear;
 }
 .register-form__subtitle {
   display: block;
@@ -148,12 +152,16 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  position: relative;
+  z-index: 1;
+  transition: 1s linear;
 }
 .register-form__form {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   row-gap: 16px;
+  transition: 1s linear;
 }
 .register-form__item {
   display: flex;
@@ -181,17 +189,18 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  color: #111111;
 }
 .register-form__item input::-moz-placeholder {
-  color: #111111;
+  color: rgba(17, 17, 17, 0.2823529412);
   font-size: 14px;
 }
 .register-form__item input:-ms-input-placeholder {
-  color: #111111;
+  color: rgba(17, 17, 17, 0.2823529412);
   font-size: 14px;
 }
 .register-form__item input::placeholder {
-  color: #111111;
+  color: rgba(17, 17, 17, 0.2823529412);
   font-size: 14px;
 }
 .register-form__item input:focus::-moz-placeholder {
@@ -309,13 +318,43 @@ h1, h2, h3, h4, h5, h6 {
 .register-form__confirm-pass {
   margin-left: -5px;
 }
+.register-form__success-registration {
+  color: #111111;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  gap: 13px;
+  background: #FFFFFF;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0;
+  transition: 1s linear;
+  padding-left: 12.2%;
+}
+.register-form__success-registration_title {
+  font-size: 22px;
+  letter-spacing: -0.41px;
+  margin-top: 9px;
+  font-weight: 600;
+}
+.register-form__success-registration_text {
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: -0.41px;
+}
 .register-form__error {
   transition-delay: 0s !important;
   transition: 0s;
+  margin-top: -0.5px;
 }
 .register-form__error input, .register-form__error select {
   color: #ff2828;
   border-bottom: solid 2px #ff2828;
+  margin-bottom: 0.5px;
 }
 
 .pass {
@@ -333,7 +372,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: flex-end;
   justify-content: space-between;
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .link-and-button__link {
   font-size: 13px;
@@ -354,6 +393,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: -11.5px;
   background: #5a61ed;
   color: #ffffff;
+  position: relative;
 }
 
 @-webkit-keyframes bg_animate {
@@ -371,6 +411,40 @@ h1, h2, h3, h4, h5, h6 {
   }
   100% {
     stroke-dashoffset: 0;
+  }
+}
+@-webkit-keyframes shaking {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: -5px;
+  }
+  50% {
+    left: 5px;
+  }
+  75% {
+    left: -5px;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes shaking {
+  0% {
+    left: 0;
+  }
+  25% {
+    left: -5px;
+  }
+  50% {
+    left: 5px;
+  }
+  75% {
+    left: -5px;
+  }
+  100% {
+    left: 0;
   }
 }
 @media (max-width: 680px) {
@@ -413,12 +487,17 @@ h1, h2, h3, h4, h5, h6 {
     min-height: 700px;
   }
   .sing-up__title {
-    bottom: 48%;
+    bottom: 38%;
+  }
+}
+@media (max-height: 750px) {
+  .pass {
+    margin-bottom: 15px;
   }
 }
 @media (max-height: 555px) {
   .sing-up__title {
-    bottom: 48%;
+    bottom: 39%;
   }
 }
 html {
@@ -441,5 +520,6 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
+  justify-content: center;
   color: #7C7C7C;
 }

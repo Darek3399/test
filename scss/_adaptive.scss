@@ -24,7 +24,7 @@
 			width: 100%;
 		}
 	}
-	
+
 	// login link and submit button
 	.link-and-button {
 		flex-direction: column-reverse;
@@ -40,15 +40,20 @@
 	}
 	.sing-up {
 		&__title {
-			bottom: 48%;
+			bottom: 38%;
 		}
 	}
 }
 
+@media (max-height: 750px) {
+	.pass {
+		margin-bottom: 15px;
+	}
+}
 @media (max-height: 555px) {
 	.sing-up {
 		&__title {
-			bottom: 48%;
+			bottom: 39%;
 		}
 	}
 }

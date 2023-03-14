@@ -17,8 +17,9 @@ fetch(countries, {
 	for(let i = 0; i < countriesArray.length; i++) {
 
 		const newItem = document.createElement(`option`)
-		newItem.innerHTML = `<option value="${countriesArray[i]}">${countriesArray[i]}</option>`
-		nationalitySelect.appendChild(newItem)
+		newItem.value = countriesArray[i]
+		newItem.innerHTML = countriesArray[i]
+		nationalitySelect.append(newItem)
 	}
 	
 	//years
@@ -29,6 +30,6 @@ fetch(countries, {
 
 		const newItem = document.createElement(`option`)
 		newItem.innerHTML = `<option value="${yearsArray[i]}">${yearsArray[i]}</option>`
-		yearsSelect.appendChild(newItem)
+		yearsSelect.append(newItem)
 	}
 })
