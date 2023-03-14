@@ -1,8 +1,8 @@
 const requests = [new URL('../server/server-ok.json', import.meta.url), new URL('../server/server-error.json', import.meta.url)]
 const submitButton = document.querySelector(`.link-and-button__submit-button`)
 const formItems = document.querySelectorAll(`.register-form__item`)
-const form = document.querySelector(`.register-form__form`)
 
+const arrowImg = new URL('../img/Shap.svg', import.meta.url)
 
 
 // plaseholder color for selects
@@ -163,7 +163,7 @@ const firstNameValidate = () => {
 		addError(`.register-form__first-name`)
 	} else {
 		removeError(`.register-form__first-name`)
-		document.querySelector(`.register-form__input_first-name`).setAttribute(`style`, `background: url(../img/Shap.svg) no-repeat right;`)
+		document.querySelector(`.register-form__input_first-name`).setAttribute(`style`, `background: url(${arrowImg}) no-repeat right;`)
 		return firstName.value
 	}
 }
@@ -182,7 +182,7 @@ const lastNameValidate = () => {
 		addError(`.register-form__last-name`)
 	} else {
 		removeError(`.register-form__last-name`)
-		document.querySelector(`.register-form__input_last-name`).setAttribute(`style`, `background: url(../img/Shap.svg) no-repeat right;`)
+		document.querySelector(`.register-form__input_last-name`).setAttribute(`style`, `background: url(${arrowImg}) no-repeat right;`)
 		return lastName.value
 	}
 }
@@ -240,7 +240,7 @@ const emailValidate = () => {
 		document.querySelector(`.register-form__input_email`).removeAttribute(`style`)
 	} else {
 		removeError(`.register-form__email`)
-		document.querySelector(`.register-form__input_email`).setAttribute(`style`, `background: url(../img/Shap.svg) no-repeat right;`)
+		document.querySelector(`.register-form__input_email`).setAttribute(`style`, `background: url(${arrowImg}) no-repeat right;`)
 		return email.value
 	}
 }
@@ -269,8 +269,8 @@ const passValidate = () => {
 			addError(`.register-form__pass`)
 			addError(`.register-form__confirm-pass`)
 		} else {
-			pass.setAttribute(`style`, `background: url(../img/Shap.svg) no-repeat right;`)
-			confPass.setAttribute(`style`, `background: url(../img/Shap.svg) no-repeat right;`)
+			pass.setAttribute(`style`, `background: url(${arrowImg}) no-repeat right;`)
+			confPass.setAttribute(`style`, `background: url(${arrowImg}) no-repeat right;`)
 			removeError(`.register-form__pass`)
 			removeError(`.register-form__confirm-pass`)
 			return pass.value
