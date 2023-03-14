@@ -447,6 +447,15 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
   }
 }
+.svg-cntr {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  right: 0;
+}
+
 @media (max-width: 680px) {
   .wrapper {
     max-height: -webkit-fit-content !important;
