@@ -234,25 +234,25 @@ h1, h2, h3, h4, h5, h6 {
   text-indent: 5px;
   white-space: pre-wrap;
 }
-.register-form__item:nth-child(3) {
+.register-form__item:nth-child(2) {
   transition-delay: 0.5s;
 }
-.register-form__item:nth-child(4) {
+.register-form__item:nth-child(3) {
   transition-delay: 1s;
 }
-.register-form__item:nth-child(5) {
+.register-form__item:nth-child(4) {
   transition-delay: 1.5s;
 }
-.register-form__item:nth-child(6) {
+.register-form__item:nth-child(5) {
   transition-delay: 2s;
 }
-.register-form__item:nth-child(7) {
+.register-form__item:nth-child(6) {
   transition-delay: 2.5s;
 }
-.register-form__item:nth-child(8) {
+.register-form__item:nth-child(7) {
   transition-delay: 3s;
 }
-.register-form__item:nth-child(9) {
+.register-form__item:nth-child(8) {
   transition-delay: 3.5s;
 }
 .register-form__first-name {
