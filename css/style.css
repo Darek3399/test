@@ -115,9 +115,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .register-form__bg {
   position: absolute;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 75%;
   right: 0;
   bottom: 0;
   z-index: 0;
