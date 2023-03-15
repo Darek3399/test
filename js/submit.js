@@ -94,41 +94,72 @@ submitButton.onclick = () => {
 		})
 			.then(data => data.text())
 			.then(data => {
-				console.log(JSON.parse(data).response.status)
+
+				const modalWindow = document.querySelector(`.register-form__modal-window`)
+				const modalWindowButton = document.querySelector(`.register-form__modal-window_button`)
+				const modalWindowText = document.querySelector(`.register-form__modal-window_text`)
+				const input = document.querySelectorAll(`input`)
+				const select = document.querySelectorAll(`select`)
+				const title = document.querySelector(`.register-form__title`)
+				const subTitle = document.querySelector(`.register-form__subtitle`)
+				const success = document.querySelector(`.register-form__success-registration`)
+
+
+
+
 				if (JSON.parse(data).response.status === `ok`) {
-					const input = document.querySelectorAll(`input`)
-					const select = document.querySelectorAll(`select`)
+					// submitButton.style.opacity = "0"
+
+					// clear inputs and selects
 					for (let item of input) {
 						item.value = ``
+						item.setAttribute(`style`, `background: none;`)
 					}
 					for (let item of select) {
 						item.children[0].selected = true
-						for(let item of select) {
-							item.setAttribute(`style`, `color: #11111148;`)
+						item.setAttribute(`style`, `color: #11111148;`)
+						item.setAttribute(`style`, `background: none;`)
+					}
+
+
+					// view modal window
+					modalWindow.style.zIndex = "3"
+					modalWindow.style.opacity = "1"
+					modalWindowText.innerHTML = `Регистрация прошла успешно`
+
+
+					// hidding modal window then submit button click
+					modalWindowButton.onclick = () => {
+						modalWindow.style.zIndex = "0"
+						modalWindow.style.opacity = "0"
+
+						title.setAttribute(`style`, `opacity: 0;`)
+						subTitle.setAttribute(`style`, `opacity: 0;`)
+						for (let item of formItems) {
+							item.style.transitionDelay = `0s`
+							item.style.opacity = `0`
 						}
+
+						setTimeout(() => {
+							success.style.zIndex = "2"
+							success.style.opacity = "1"
+
+						}, 1000);
 					}
-
-					const title = document.querySelector(`.register-form__title`)
-					const subTitle = document.querySelector(`.register-form__subtitle`)
-					title.setAttribute(`style`, `opacity: 0;`)
-					subTitle.setAttribute(`style`, `opacity: 0;`)
-					for(let item of formItems) {
-						item.style.transitionDelay = `0s`
-						item.style.opacity = `0`
-					}
-					submitButton.setAttribute(`style`, `display: none;`)
-
-					setTimeout(() => {
-						const success = document.querySelector(`.register-form__success-registration`)
-						success.style.zIndex = "2"
-						success.style.opacity = "1"
-						
-					}, 1000);
-
 
 
 				} else {
+					// view modal window
+					modalWindow.style.zIndex = "3"
+					modalWindow.style.opacity = "1"
+					modalWindowText.innerHTML = `Этот эмейл уже зарегестрирован`
 
+
+					// hidding modal window then submit button click
+					modalWindowButton.onclick = () => {
+						modalWindow.style.zIndex = "0"
+						modalWindow.style.opacity = "0"
+					}
 				}
 
 			})
@@ -310,4 +341,3 @@ for (let item of formItems) {
 		item.classList.remove(`register-form__error`)
 	}
 }
-// darek3399@mail.ru
